@@ -41,6 +41,15 @@
 #include <opencv2/cudawarping.hpp>
 
 #include "face_tracker.h"
+
+/* Head tracker selection: 1 = AprilTag on phone (demo recording), 0 = face tracker */
+#define USE_APRILTAG_TRACKER 1
+#if USE_APRILTAG_TRACKER
+using HeadTracker = AprilTagTracker;
+#else
+using HeadTracker = FaceTracker;
+#endif
+
 #include "oak_receiver.h"
 
 #include <QApplication>
@@ -62,6 +71,12 @@
 #define FPS_WINDOW          24
 #define FPS_PRINT_INTERVAL  2.0
 #define FACE_CAM_INDEX      0
+
+/* Webcam lens position relative to OAK-D left lens (metres), measured 28/10/2026
+ * Frame: +X right, +Y down, +Z into the scene (as seen from viewer's seat) */
+static constexpr float WEBCAM_OFFSET_X = -0.038f;
+static constexpr float WEBCAM_OFFSET_Y = -0.068f;
+static constexpr float WEBCAM_OFFSET_Z = -0.054f;
 
 /* ========================================================================
  * GLSL Compute Shaders (OpenGL ES 3.1)
@@ -499,16 +514,16 @@ private:
      * distance, giving correctly-sized scene objects vs the shorter 0.65 m gap.
      * normal points from display toward viewer (−Z in OAK-D frame). */
     struct DisplayConfig {
-        float pos[3]     = {0.f, 0.f, 0.f};
+        float pos[3]     = {0.0225f, 0.134f, -0.052f};
         float normal[3]  = {0.f, 0.f,-1.f};   /* toward viewer */
         float right_v[3] = {1.f, 0.f, 0.f};
         float up_v[3]    = {0.f, 1.f, 0.f};   /* +Y (cam-space down) so dst_y=0 = screen top */
-        float width_m    = 0.133f;             /* 480/1920 × 532 mm */
-        float height_m   = 0.300f;
+        float width_m    = 0.194f;             /* 480/1920 × 532 mm */
+        float height_m   = 0.344f;
     } display_config;
 
-    int out_w{480};
-    int out_h{1080};
+    int out_w{540};
+    int out_h{960};
 
     /* GL programs */
     GLuint prog_unproject{0};
@@ -1039,9 +1054,10 @@ void SynthWindow::paintGL()
     if (face_tracking_enabled && face_tracker && face_tracker->isActive()) {
         HeadPos hp = face_tracker->headPos();
         if (hp.valid) {
-            head_x = -hp.x;
-            head_y =  hp.y;
-            head_z = -hp.z;   /* viewer is at negative Z in OAK-D space */
+		
+            head_x = -hp.x + WEBCAM_OFFSET_X;
+            head_y =  hp.y + WEBCAM_OFFSET_Y;
+            head_z = -hp.z + WEBCAM_OFFSET_Z;   /* viewer is at negative Z in OAK-D space */
         }
     }
 
@@ -1257,8 +1273,8 @@ int main(int argc, char *argv[])
 
     QApplication app(argc, argv);
     SynthWindow win;
-    win.resize(1920, 1080);
-    win.show();
+    win.resize(1080, 1920);
+    win.showFullScreen();
     return app.exec();
 }
 

@@ -1,0 +1,43 @@
+CUDA available — GPU temporal filter enabled
+OAKReceiver: failed to open device: No available devices
+
+============================================================
+VIEW SYNTHESIS (DIBR)
+============================================================
+Resolution:      640x480
+Processing:      640x480 (100%)
+Output (display):540x960
+Display size:    194 × 344 mm @ (0,0,-0.05m)
+Hole filling:    ON (JFA)
+============================================================
+
+Controls:
+  ESC   - Exit
+  H     - Toggle hole filling
+  1/2/3 - Scale: 1.0x / 0.5x / 0.25x
+  F     - Toggle face-tracking shift
+  C     - Recalibrate face tracker (look straight ahead first)
+============================================================
+
+[FaceTracker] Started on camera 0  model: ../src/models/face_landmark_with_attention.onnx
+OpenGL version: OpenGL ES 3.2 NVIDIA 32.7.6
+GLSL version:   OpenGL ES GLSL ES 3.20
+Renderer:       NVIDIA Tegra X1 (nvgpu)/integrated
+GPU textures created: src 640x480  out 540x960
+GPU pipeline initialised
+[ WARN:0@9.196] global cap_gstreamer.cpp:1777 open OpenCV | GStreamer warning: Cannot query video position: status=1, value=2, duration=-1
+[FaceTracker] Camera 0: 1280x720
+[TRT] Using an engine plan file across different models of devices is not recommended and is likely to affect performance or even cause errors.
+[FaceTracker] TRT engine loaded from cache: ../src/models/face_landmark_with_attention.onnx.trt
+[FaceTracker] binding 0 'input_1' IN vol=110592
+[FaceTracker] binding 1 'output_mesh_identity' OUT vol=1404
+[FaceTracker] binding 2 'conv_faceflag' OUT vol=1
+[FaceTracker] binding 3 'output_right_iris' OUT vol=10
+[FaceTracker] binding 4 'output_right_eye' OUT vol=142
+[FaceTracker] binding 5 'output_left_iris' OUT vol=10
+[FaceTracker] binding 6 'output_left_eye' OUT vol=142
+[FaceTracker] binding 7 'output_lips' OUT vol=160
+[FaceTracker] 468 landmarks, input NCHW, iris L=5 R=3
+[FaceTracker] Haar cascade loaded: /usr/share/opencv4/haarcascades/haarcascade_frontalface_default.xml
+[FaceTracker] Calibrated  ref=(0.000, 0.000)
+Face tracker recalibrated

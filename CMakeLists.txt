@@ -95,6 +95,7 @@ target_link_libraries(depth_pipeline
 add_executable(view_synthesis
     src/view_synthesis.cpp
     src/face_tracker.cpp
+    src/apriltag_tracker.cpp
     src/oak_receiver.cpp
 )
 target_include_directories(view_synthesis PRIVATE ${TRT_INCLUDE_DIR} ${CUDA_INCLUDE_DIRS})

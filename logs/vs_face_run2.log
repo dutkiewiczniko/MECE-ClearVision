@@ -1,0 +1,163 @@
+CUDA available — GPU temporal filter enabled
+OAKReceiver: fx=452.1 fy=451.9 cx=315.0 cy=238.2 baseline=75.0 mm
+
+============================================================
+VIEW SYNTHESIS (DIBR)
+============================================================
+Resolution:      640x480
+Processing:      640x480 (100%)
+Output (display):540x960
+Display size:    194 × 344 mm @ (0,0,-0.05m)
+Hole filling:    ON (JFA)
+============================================================
+
+Controls:
+  ESC   - Exit
+  H     - Toggle hole filling
+  1/2/3 - Scale: 1.0x / 0.5x / 0.25x
+  F     - Toggle face-tracking shift
+  C     - Recalibrate face tracker (look straight ahead first)
+============================================================
+
+[FaceTracker] Started on camera 0  model: ../src/models/face_landmark_with_attention.onnx
+OpenGL version: OpenGL ES 3.2 NVIDIA 32.7.6
+GLSL version:   OpenGL ES GLSL ES 3.20
+Renderer:       NVIDIA Tegra X1 (nvgpu)/integrated
+GPU textures created: src 640x480  out 540x960
+GPU pipeline initialised
+[DIAG] First frame: left=640x480  disp=640x480 type=2  proc=640x480  cuda=1
+[ WARN:1@7.345] global cap_gstreamer.cpp:1777 open OpenCV | GStreamer warning: Cannot query video position: status=1, value=2, duration=-1
+[FaceTracker] Camera 0: 1280x720
+FPS: 0.3  hole=JFA  proc=640x480  track=OFF  head=(0.0,0.0,-105.0)cm
+[TRT] Using an engine plan file across different models of devices is not recommended and is likely to affect performance or even cause errors.
+FPS: 3.9  hole=JFA  proc=640x480  track=OFF  head=(0.0,0.0,-105.0)cm
+FPS: 10.0  hole=JFA  proc=640x480  track=OFF  head=(0.0,0.0,-105.0)cm
+[FaceTracker] TRT engine loaded from cache: ../src/models/face_landmark_with_attention.onnx.trt
+FPS: 11.3  hole=JFA  proc=640x480  track=OFF  head=(0.0,0.0,-105.0)cm
+[FaceTracker] binding 0 'input_1' IN vol=110592
+[FaceTracker] binding 1 'output_mesh_identity' OUT vol=1404
+[FaceTracker] binding 2 'conv_faceflag' OUT vol=1
+[FaceTracker] binding 3 'output_right_iris' OUT vol=10
+[FaceTracker] binding 4 'output_right_eye' OUT vol=142
+[FaceTracker] binding 5 'output_left_iris' OUT vol=10
+[FaceTracker] binding 6 'output_left_eye' OUT vol=142
+[FaceTracker] binding 7 'output_lips' OUT vol=160
+[FaceTracker] 468 landmarks, input NCHW, iris L=5 R=3
+[FaceTracker] Haar cascade loaded: /usr/share/opencv4/haarcascades/haarcascade_frontalface_default.xml
+FPS: 9.4  hole=JFA  proc=640x480  track=OFF  head=(0.0,0.0,-105.0)cm
+FPS: 5.2  hole=JFA  proc=640x480  track=OFF  head=(0.0,0.0,-105.0)cm
+FPS: 3.4  hole=JFA  proc=640x480  track=OFF  head=(0.0,0.0,-105.0)cm
+FPS: 2.7  hole=JFA  proc=640x480  track=OFF  head=(0.0,0.0,-105.0)cm
+FPS: 2.3  hole=JFA  proc=640x480  track=OFF  head=(0.0,0.0,-105.0)cm
+FPS: 2.3  hole=JFA  proc=640x480  track=OFF  head=(0.0,0.0,-105.0)cm
+FPS: 14.0  hole=JFA  proc=640x480  track=ON  head=(-4.1,-6.9,-50.0)cm
+FPS: 15.3  hole=JFA  proc=640x480  track=ON  head=(-3.4,-6.9,-46.8)cm
+[FaceTracker] face=(420,200 360x360) iris=22.9px  Z=0.47m  pos=(-1.9,-1.3)cm
+FPS: 13.1  hole=JFA  proc=640x480  track=ON  head=(-2.5,-7.5,-49.1)cm
+FPS: 13.1  hole=JFA  proc=640x480  track=ON  head=(5.2,-5.3,-48.5)cm
+FPS: 10.2  hole=JFA  proc=640x480  track=ON  head=(9.7,-4.2,-47.0)cm
+FPS: 11.4  hole=JFA  proc=640x480  track=ON  head=(7.0,-4.4,-47.2)cm
+[FaceTracker] face=(348,274 374x374) iris=25.2px  Z=0.42m  pos=(-4.7,2.1)cm
+FPS: 12.1  hole=JFA  proc=640x480  track=ON  head=(1.1,-4.6,-48.6)cm
+FPS: 8.4  hole=JFA  proc=640x480  track=ON  head=(-1.0,-5.0,-46.1)cm
+FPS: 14.5  hole=JFA  proc=640x480  track=ON  head=(-1.0,-6.5,-37.8)cm
+FPS: 13.3  hole=JFA  proc=640x480  track=ON  head=(-11.3,-5.2,-63.0)cm
+FPS: 14.8  hole=JFA  proc=640x480  track=ON  head=(-1.4,-4.3,-46.4)cm
+FPS: 14.0  hole=JFA  proc=640x480  track=ON  head=(5.0,-2.4,-63.4)cm
+FPS: 14.8  hole=JFA  proc=640x480  track=ON  head=(1.1,-3.5,-51.9)cm
+FPS: 13.9  hole=JFA  proc=640x480  track=ON  head=(-0.4,-4.8,-47.9)cm
+[FaceTracker] face=(364,284 410x410) iris=29.3px  Z=0.37m  pos=(-2.7,3.1)cm
+FPS: 15.0  hole=JFA  proc=640x480  track=ON  head=(-0.9,-3.5,-43.8)cm
+FPS: 14.2  hole=JFA  proc=640x480  track=ON  head=(2.1,-4.2,-52.0)cm
+FPS: 16.4  hole=JFA  proc=640x480  track=ON  head=(6.2,-6.2,-60.4)cm
+FPS: 13.3  hole=JFA  proc=640x480  track=ON  head=(8.1,-5.2,-61.7)cm
+[FaceTracker] face=(314,286 272x272) iris=19.1px  Z=0.56m  pos=(-11.1,1.7)cm
+FPS: 14.5  hole=JFA  proc=640x480  track=ON  head=(8.2,-4.8,-62.4)cm
+FPS: 14.6  hole=JFA  proc=640x480  track=ON  head=(0.2,-4.6,-49.6)cm
+FPS: 14.6  hole=JFA  proc=640x480  track=ON  head=(3.4,-3.7,-66.4)cm
+[FaceTracker] face=(494,252 216x216) iris=15.2px  Z=0.70m  pos=(-2.8,-1.8)cm
+FPS: 13.9  hole=JFA  proc=640x480  track=ON  head=(1.0,-7.0,-75.1)cm
+FPS: 14.1  hole=JFA  proc=640x480  track=ON  head=(1.4,-6.9,-77.3)cm
+FPS: 13.2  hole=JFA  proc=640x480  track=ON  head=(8.8,-0.5,-72.9)cm
+[FaceTracker] face=(282,380 312x312) iris=17.7px  Z=0.60m  pos=(-13.2,8.0)cm
+FPS: 14.9  hole=JFA  proc=640x480  track=ON  head=(8.3,0.2,-65.7)cm
+FPS: 13.8  hole=JFA  proc=640x480  track=ON  head=(-0.5,-6.6,-50.9)cm
+FPS: 14.5  hole=JFA  proc=640x480  track=ON  head=(-1.5,-6.4,-45.6)cm
+[FaceTracker] face=(380,212 460x460) iris=30.1px  Z=0.35m  pos=(-1.3,1.3)cm
+FPS: 12.8  hole=JFA  proc=640x480  track=ON  head=(-2.4,-5.9,-41.3)cm
+FPS: 14.9  hole=JFA  proc=640x480  track=ON  head=(-1.9,-4.9,-38.3)cm
+FPS: 13.2  hole=JFA  proc=640x480  track=ON  head=(5.6,-5.6,-55.1)cm
+[FaceTracker] face=(414,272 308x308) iris=21.7px  Z=0.49m  pos=(-3.8,1.6)cm
+FPS: 15.4  hole=JFA  proc=640x480  track=ON  head=(2.3,-4.8,-59.9)cm
+FPS: 12.5  hole=JFA  proc=640x480  track=ON  head=(0.2,-4.4,-51.0)cm
+FPS: 14.6  hole=JFA  proc=640x480  track=ON  head=(-0.9,-3.7,-43.1)cm
+[FaceTracker] face=(366,288 408x408) iris=27.1px  Z=0.39m  pos=(-3.2,3.4)cm
+FPS: 11.9  hole=JFA  proc=640x480  track=ON  head=(-0.8,-3.8,-46.6)cm
+FPS: 14.9  hole=JFA  proc=640x480  track=ON  head=(0.2,-6.5,-57.0)cm
+FPS: 13.2  hole=JFA  proc=640x480  track=ON  head=(-0.5,-5.0,-50.9)cm
+FPS: 15.1  hole=JFA  proc=640x480  track=ON  head=(-1.6,-5.1,-50.5)cm
+FPS: 12.1  hole=JFA  proc=640x480  track=ON  head=(-1.5,-4.6,-49.4)cm
+[FaceTracker] face=(430,240 364x364) iris=25.9px  Z=0.41m  pos=(-1.2,1.0)cm
+FPS: 15.4  hole=JFA  proc=640x480  track=ON  head=(-2.5,-5.5,-46.2)cm
+FPS: 13.2  hole=JFA  proc=640x480  track=ON  head=(-0.1,-5.7,-48.3)cm
+FPS: 15.6  hole=JFA  proc=640x480  track=ON  head=(-0.5,-5.5,-48.5)cm
+[FaceTracker] face=(402,234 346x346) iris=23.5px  Z=0.45m  pos=(-3.2,-0.1)cm
+FPS: 11.8  hole=JFA  proc=640x480  track=ON  head=(-0.6,-6.1,-50.8)cm
+FPS: 11.2  hole=JFA  proc=640x480  track=ON  head=(11.7,1.4,-76.3)cm
+FPS: 9.5  hole=JFA  proc=640x480  track=ON  head=(-0.0,-3.7,-49.6)cm
+FPS: 11.0  hole=JFA  proc=640x480  track=ON  head=(-2.0,-4.3,-42.0)cm
+[FaceTracker] face=(362,282 384x384) iris=28.8px  Z=0.37m  pos=(-3.2,2.5)cm
+FPS: 9.6  hole=JFA  proc=640x480  track=ON  head=(-1.7,-4.3,-41.9)cm
+FPS: 10.5  hole=JFA  proc=640x480  track=ON  head=(2.2,-4.5,-46.5)cm
+FPS: 12.8  hole=JFA  proc=640x480  track=ON  head=(-1.6,-3.7,-43.7)cm
+[FaceTracker] face=(206,122 560x560) iris=32.8px  Z=0.33m  pos=(-3.7,-0.9)cm
+FPS: 14.1  hole=JFA  proc=640x480  track=ON  head=(0.3,-6.9,-40.6)cm
+FPS: 14.0  hole=JFA  proc=640x480  track=ON  head=(-3.2,-4.9,-42.3)cm
+FPS: 11.3  hole=JFA  proc=640x480  track=ON  head=(-4.3,-3.4,-42.5)cm
+FPS: 11.1  hole=JFA  proc=640x480  track=ON  head=(-4.1,-3.5,-42.3)cm
+FPS: 13.7  hole=JFA  proc=640x480  track=ON  head=(-3.8,-3.1,-44.6)cm
+FPS: 14.8  hole=JFA  proc=640x480  track=ON  head=(-3.8,-3.1,-44.6)cm
+FPS: 12.5  hole=JFA  proc=640x480  track=ON  head=(7.5,-5.5,-62.4)cm
+FPS: 13.6  hole=JFA  proc=640x480  track=ON  head=(6.2,-4.8,-57.4)cm
+FPS: 13.7  hole=JFA  proc=640x480  track=ON  head=(6.0,-3.0,-48.2)cm
+[FaceTracker] face=(404,300 380x380) iris=28.3px  Z=0.38m  pos=(-1.6,3.4)cm
+FPS: 15.6  hole=JFA  proc=640x480  track=ON  head=(-0.2,-3.2,-43.7)cm
+FPS: 13.8  hole=JFA  proc=640x480  track=ON  head=(-4.8,-3.6,-43.3)cm
+FPS: 14.5  hole=JFA  proc=640x480  track=ON  head=(-0.8,-6.9,-37.4)cm
+[FaceTracker] face=(246,142 516x516) iris=37.1px  Z=0.29m  pos=(-3.3,-0.3)cm
+FPS: 12.6  hole=JFA  proc=640x480  track=ON  head=(-0.3,-7.2,-36.1)cm
+FPS: 15.5  hole=JFA  proc=640x480  track=ON  head=(-3.4,-4.3,-49.3)cm
+FPS: 13.0  hole=JFA  proc=640x480  track=ON  head=(0.1,-1.6,-60.4)cm
+[FaceTracker] face=(516,146 296x296) iris=18.0px  Z=0.59m  pos=(2.1,-6.3)cm
+FPS: 15.0  hole=JFA  proc=640x480  track=ON  head=(-1.8,-8.8,-66.1)cm
+FPS: 12.7  hole=JFA  proc=640x480  track=ON  head=(3.3,-4.0,-51.8)cm
+FPS: 15.8  hole=JFA  proc=640x480  track=ON  head=(6.5,-2.4,-63.0)cm
+[FaceTracker] face=(444,226 346x346) iris=22.1px  Z=0.48m  pos=(-1.2,-0.1)cm
+FPS: 12.9  hole=JFA  proc=640x480  track=ON  head=(-0.9,-5.9,-51.0)cm
+FPS: 15.5  hole=JFA  proc=640x480  track=ON  head=(0.6,-5.0,-47.6)cm
+FPS: 12.5  hole=JFA  proc=640x480  track=ON  head=(4.4,-4.0,-47.0)cm
+FPS: 15.9  hole=JFA  proc=640x480  track=ON  head=(6.4,-3.7,-46.9)cm
+FPS: 12.5  hole=JFA  proc=640x480  track=ON  head=(4.5,-3.9,-47.3)cm
+[FaceTracker] face=(360,286 400x400) iris=27.3px  Z=0.39m  pos=(-3.7,3.1)cm
+FPS: 14.9  hole=JFA  proc=640x480  track=ON  head=(0.1,-3.6,-45.8)cm
+FPS: 12.8  hole=JFA  proc=640x480  track=ON  head=(-1.1,-5.6,-40.1)cm
+FPS: 15.0  hole=JFA  proc=640x480  track=ON  head=(-0.7,-7.2,-35.5)cm
+[FaceTracker] face=(264,156 498x498) iris=34.2px  Z=0.31m  pos=(-3.6,-0.5)cm
+FPS: 13.1  hole=JFA  proc=640x480  track=ON  head=(-0.1,-7.2,-35.9)cm
+FPS: 15.4  hole=JFA  proc=640x480  track=ON  head=(0.1,-7.0,-36.3)cm
+FPS: 12.9  hole=JFA  proc=640x480  track=ON  head=(-1.9,-6.2,-40.4)cm
+[FaceTracker] face=(308,228 382x382) iris=25.3px  Z=0.42m  pos=(-6.3,0.6)cm
+FPS: 15.9  hole=JFA  proc=640x480  track=ON  head=(2.4,-6.2,-47.0)cm
+FPS: 14.1  hole=JFA  proc=640x480  track=ON  head=(3.5,-5.3,-47.3)cm
+FPS: 15.8  hole=JFA  proc=640x480  track=ON  head=(-2.6,-4.5,-46.5)cm
+[FaceTracker] face=(238,130 552x552) iris=38.0px  Z=0.28m  pos=(-3.0,-0.5)cm
+FPS: 12.8  hole=JFA  proc=640x480  track=ON  head=(-2.3,-6.1,-38.1)cm
+FPS: 15.5  hole=JFA  proc=640x480  track=ON  head=(-1.2,-4.0,-43.9)cm
+FPS: 13.3  hole=JFA  proc=640x480  track=ON  head=(3.3,-3.7,-43.6)cm
+[FaceTracker] face=(246,304 374x374) iris=27.8px  Z=0.39m  pos=(-8.4,3.4)cm
+FPS: 13.7  hole=JFA  proc=640x480  track=ON  head=(4.2,-3.4,-44.7)cm
+FPS: 12.5  hole=JFA  proc=640x480  track=ON  head=(-2.2,-4.3,-45.4)cm
+FPS: 15.1  hole=JFA  proc=640x480  track=ON  head=(-7.1,-4.9,-42.2)cm
+[FaceTracker] face=(244,118 534x534) iris=38.5px  Z=0.28m  pos=(-1.4,-0.3)cm
+FPS: 6.1  hole=JFA  proc=640x480  track=ON  head=(3.7,-9.5,-63.0)cm
+[FaceTracker] Thread exited after 950 frames

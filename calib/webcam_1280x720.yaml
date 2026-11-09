@@ -1,0 +1,22 @@
+%YAML:1.0
+---
+calibration_date: "2026-10-29 14:31"
+image_width: 1280
+image_height: 720
+focus_absolute: 260
+camera_matrix: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [ 1068.4239735646199, 0., 674.58545987370735, 0.,
+       1069.3256663123091, 361.19631613503316, 0., 0., 1. ]
+distortion_coefficients: !!opencv-matrix
+   rows: 1
+   cols: 5
+   dt: d
+   data: [ 0.11151530777029367, -0.36713104537529728,
+       -0.0041295134150767321, 0.0051412009421898256,
+       0.27741436681312909 ]
+rms_reprojection_error: 1.4057734873669356
+num_images: 42
+board: "AprilGrid 6x6 tag36h11, 2-bit border, tag 31.5 mm, gap 9.5 mm"

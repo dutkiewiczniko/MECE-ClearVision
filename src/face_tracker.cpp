@@ -331,8 +331,9 @@ void FaceTracker::threadLoop()
             printf("[FaceTracker] First inference: lm[0..5] = "
                    "%.3f %.3f %.3f  %.3f %.3f %.3f\n",
                    lm[0], lm[1], lm[2], lm[3], lm[4], lm[5]);
-            active_ = true;
+        
         }
+	active_ = true;
 
         /* Landmarks: normalised [0,1] or pixel [0,192]? */
         float lm_scale = 1.0f;
